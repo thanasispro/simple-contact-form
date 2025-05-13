@@ -71,7 +71,8 @@ body {
   border: 0.0625rem solid hsl(186, 15%, 59%);
   border-radius: 0.5rem;
   font-family: "Karla", sans-serif;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: 400;
   transition: border-color 0.2s;
 }
 .form__input:hover,
