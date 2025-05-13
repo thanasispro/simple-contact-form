@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <div class="toast" id="success-toast" role="alert" aria-live="assertive">
+      <div class="toast__content">
+        <div class="toast__header">
+          <div class="toast__icon" aria-hidden="true">
+            <img
+              src="./assets/images/icon-success-check.svg"
+              alt=""
+              width="24"
+              height="24"
+            />
+          </div>
+          <h2 class="toast__title">Message Sent!</h2>
+        </div>
+        <p class="toast__message">
+          Thanks for completing the form. We'll be in touch soon!
+        </p>
+      </div>
+    </div>
+
+    <main class="main">
+      <div class="container">
+        <header class="form__header">
+          <h1 class="form__title">Contact Us</h1>
+        </header>
+
+        <form class="form" id="contact-form" novalidate>
+          <div class="form__row">
+            <div class="form__field">
+              <label for="first-name" class="form__label">First Name</label>
+              <input
+                type="text"
+                id="first-name"
+                name="firstName"
+                class="form__input"
+                required
+                aria-required="true"
+                aria-describedby="first-name-error"
+              />
+              <p id="first-name-error" class="form__error" aria-live="polite">
+                This field is required
+              </p>
+            </div>
+
+            <div class="form__field">
+              <label for="last-name" class="form__label">Last Name</label>
+              <input
+                type="text"
+                id="last-name"
+                name="lastName"
+                class="form__input"
+                required
+                aria-required="true"
+                aria-describedby="last-name-error"
+              />
+              <p id="last-name-error" class="form__error" aria-live="polite">
+                This field is required
+              </p>
+            </div>
+          </div>
+
+          <div class="form__field">
+            <label for="email" class="form__label">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form__input"
+              required
+              aria-required="true"
+              aria-describedby="email-error email-format-error"
+            />
+            <p id="email-format-error" class="form__error" aria-live="polite">
+              Please enter a valid email address
+            </p>
+            <p id="email-error" class="form__error" aria-live="polite">
+              This field is required
+            </p>
+          </div>
+
+          <div class="form__row">
+            <div class="form__field">
+              <fieldset class="form__fieldset">
+                <legend class="form__label">Query Type</legend>
+                <div class="form__radio-group">
+                  <div class="form__radio-option">
+                    <input
+                      type="radio"
+                      id="query-general"
+                      name="queryType"
+                      value="general"
+                      class="form__radio"
+                      required
+                      aria-describedby="query-type-error"
+                    />
+                    <label for="query-general" class="form__radio-label"
+                      >General Enquiry</label
+                    >
+                  </div>
+
+                  <div class="form__radio-option">
+                    <input
+                      type="radio"
+                      id="query-support"
+                      name="queryType"
+                      value="support"
+                      class="form__radio"
+                      required
+                      aria-describedby="query-type-error"
+                    />
+                    <label for="query-support" class="form__radio-label"
+                      >Support Request</label
+                    >
+                  </div>
+                </div>
+                <p id="query-type-error" class="form__error" aria-live="polite">
+                  Please select a query type
+                </p>
+              </fieldset>
+            </div>
+          </div>
+
+          <div class="form__field">
+            <label for="message" class="form__label">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              class="form__textarea"
+              required
+              aria-required="true"
+              aria-describedby="message-error"
+            ></textarea>
+            <p id="message-error" class="form__error" aria-live="polite">
+              This field is required
+            </p>
+          </div>
+
+          <div class="form__field form__field--checkbox">
+            <div class="form__checkbox-container">
+              <input
+                type="checkbox"
+                id="consent"
+                name="consent"
+                class="form__checkbox"
+                required
+                aria-required="true"
+                aria-describedby="consent-error"
+              />
+              <label for="consent" class="form__checkbox-label"
+                >I consent to being contacted by the team</label
+              >
+            </div>
+            <p id="consent-error" class="form__error" aria-live="polite">
+              To submit this form, please consent to being contacted
+            </p>
+          </div>
+          <button type="submit" class="form__submit">Submit</button>
+        </form>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
