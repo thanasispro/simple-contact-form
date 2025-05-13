@@ -74,6 +74,7 @@ body {
   font-size: 1.1rem;
   font-weight: 400;
   transition: border-color 0.2s;
+  color: hsl(187, 24%, 22%);
 }
 .form__input:hover,
 .form__textarea:hover {
