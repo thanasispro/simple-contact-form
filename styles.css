@@ -138,17 +138,18 @@ body {
 }
 .form__radio:checked {
   border: 0.125rem solid hsl(169, 82%, 27%);
-  background-color: hsl(148, 38%, 91%);
+  background-color: hsl(0, 0%, 100%);
 }
 .form__radio:checked::after {
   content: "";
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url("./assets/images/icon-radio-selected.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: hsl(169, 82%, 27%);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .form__radio:focus {
   outline: none;

@@ -178,18 +178,19 @@ body {
 
 .form__radio:checked {
   border: 0.125rem solid @color-green-600;
-  background-color: @color-green-200;
+  background-color: @color-white;
 }
 
 .form__radio:checked::after {
   content: "";
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url("./assets/images/icon-radio-selected.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: @color-green-600;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .form__radio:focus {
